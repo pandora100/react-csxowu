@@ -9,8 +9,10 @@ toast.configure();
 const Ul = styled.ul`
   height: ${({ height })=> height}px;
   opacity: ${({ height })=> height > 0 ? 1 : 0.1};
-  overflow: hidden;
+  overflow: scroll;
   transition: 0.1s ;
+  height:200px;
+  border:1px solid;
 `;
 ///
 export default function App() {
@@ -88,15 +90,15 @@ const [height, setHeight] = useState(0);
     <span ref={buttonTextRef}>Show More</span>
     <i  className="fas fa-caret-down"></i>
   </button>
-
-  <div ref={moreRef}> <p className="Label--info">
+   <div ref={moreRef}> <p className="Label--info">
+ 
       
           Seleccione el Modulo además del Grupo ó Tecnología</p>
            <Ul height={height} ref={content}>
       {list.map((item, index)=> <li key={index}>{item} </li>)}
       <ToastContainer/>
 </Ul>
-   
+  
   </div>
   </React.Fragment>
   );
