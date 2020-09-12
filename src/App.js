@@ -93,9 +93,9 @@ const [height, setHeight] = useState(0);
           Seleccione el Modulo además del Grupo ó Tecnología</p>
            <Ul height={height} ref={content}>
       {list.map((item, index)=> <li key={index}>{item} </li>)}
- 
+      <ToastContainer/>
 </Ul>
-   <ToastContainer/>
+   
   </div>
   </React.Fragment>
   );
